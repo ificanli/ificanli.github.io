@@ -4,6 +4,66 @@
   
     
     <entry>
+      <title>怪物体系</title>
+      <link href="/2024/10/08/%E6%80%AA%E7%89%A9%E4%BD%93%E7%B3%BB/index/"/>
+      <url>/2024/10/08/%E6%80%AA%E7%89%A9%E4%BD%93%E7%B3%BB/index/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>战斗系统理论</title>
+      <link href="/2024/10/08/%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA/index/"/>
+      <url>/2024/10/08/%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA/index/</url>
+      
+        <content type="html"><![CDATA[<h1 id="战斗系统拆分体系"><a href="#战斗系统拆分体系" class="headerlink" title="战斗系统拆分体系"></a>战斗系统拆分体系</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在不同游戏的战斗系统中，会有类似的设计，比如韧性条，浮空攻击等。把存在多个游戏中类似的设计提取出来，作为一类体系设计，来分析它在不同游戏中的作用，是一种分析战斗系统的方法论。于是，在我眼中的战斗系统变成了xx体系+xx体系+xx体系+一些独特设计。一个战斗系统的优缺点为几个体系之和，加上体系之间的关联产生的作用。</p><p>战斗系统和角色体系的区别：</p><ul><li>战斗系统只谈论系统设计和战斗机制设计，不涉及表现层和操作层</li><li>相交之处在于，角色能力是战斗系统的组成部分，角色自身循环也是战斗输出循环的一部分，整体看，角色更具体，为实体类设计，更侧重操作和反馈，战斗系统更抽象，为规则类设计。</li><li>战斗系统框架给角色自身输出循环和角色的特色留出设计空间</li></ul><p>我把体系分为三大类，输出体系设计、互动体系设计、辅助体系设计。</p><p>体验来看，输出体系多为各类的攻体验。交互体系体验是达成一些策略挑战、操作挑战带来的成就感和满足感。辅助体系作为攻防的润滑剂，协助提供一些策略感。</p><h2 id="输出体系"><a href="#输出体系" class="headerlink" title="输出体系"></a>输出体系</h2><p>输出体系，即角色成体系、结构化的一些进攻设计。项目的角色自身输出循环应当在输出体系的框架设定之中。</p><ul><li>提供多种攻击方式选择：多样化攻击方式，给玩家提供一定的选择感</li><li>攻击方式之间的联动</li></ul><p>在一个单次输出过程，即 攻击-命中&#x2F;落空的过程中，有很多设计点</p><ul><li>攻击方式、攻击节奏、攻击表现和风格等等</li><li>命中参数：力度、命中交互（破防、格挡等）、命中表现等等</li><li>指令和表现的传递：组合、派生、连段输入对应的攻击次数和节奏</li></ul><p>针对连续的输出过程，侧重连续输出的节奏变化和攻击方式变化设计</p><ul><li>节奏是出招时刻和出招力度的改变</li><li>平均节奏，包括平均输出频率和平均操作频率，对战斗体验有比较大的影响。比如黑魂的慢攻击频率，更写实，侧重玩家决策的重要性。而快节奏进攻容易带来打击感和操控感，对情绪刺激力更大</li><li>节奏的变化有一定的规律。一些反直觉连段设计容易有独特的体验，也容易遭到诟病。</li><li>攻击方式即动作等表现的衔接</li></ul><p>输出体系大约有以下几种</p><ul><li>多技能和大招的输出体系</li><li>轻重击和搓招的输出体系</li><li>多武器切换的输出体系</li><li>浮空攻击的输出体系</li><li>多角色切换输出体系</li><li>多角色组队输出体系</li></ul><p>输出体系共存的耦合考虑：主要考虑不同输出体系的伤害占比和应用时长占比。</p><p>输出体系有的共性：操作&#x2F;攻击频率</p><h2 id="互动体系"><a href="#互动体系" class="headerlink" title="互动体系"></a>互动体系</h2><p>互动，即玩家和怪物的互动。可以理解为玩家对怪物的行为做出反应，或者怪物对玩家的进攻做出反应。互动的目的在于构建交手体验。打木桩和打活生生的有智慧的目标的战斗的区别在于，后者能给战斗带来一些挑战，提供胜利的成就感，拉高战斗的爽快感。</p><p>怪物在战斗系统里的作用大致也就是“做好主角的陪练”。</p><p>在一些pvp里，也有强互动设计,此处一并讨论。</p><p>增加互动的设计思路有：</p><ul><li>给玩家提供完全自由进攻回合和完全防守回合。</li><li>攻防闪相关的克制。</li><li>攻击攻击对抗。攻防一体招式。</li><li>特殊的防御情况。</li></ul><p>于是，大致有如下互动体系</p><ul><li>硬直的互动体系</li><li>闪避格挡的互动体系</li><li>破韧虚弱、狂暴无敌互动体系</li><li>部位破坏的互动体系</li><li>弱点打击的互动体系</li><li>攻击对抗的互动体系</li></ul><p>互动体系共存的耦合考虑：考虑不同互动体系的应用场合不同，考验不同，共存时考虑的是给玩家提供选择，不同选择收益不同。</p><p>不同互动体系的共性：</p><ul><li>互动难度</li><li>互动方式：时间窗口把握、空间距离把握&#x2F;立回、操控难度</li><li>惩罚</li><li>互动频率</li><li>怪物进攻和防守行为频率</li><li>移动能力和攻守行为时长间接影响互动频率</li></ul><h2 id="辅助体系"><a href="#辅助体系" class="headerlink" title="辅助体系"></a>辅助体系</h2><p>辅助体系可以粗糙的理解为，不能明确定义带来输出体验还是互动对抗的体验，它有以下作用</p><ul><li>平滑攻击和防御行为</li><li>丰富一些纯攻防外的体验</li><li>带来独特的战斗攻防体验、战斗目标和结果等</li></ul><p>比如</p><ul><li>资源条设计</li><li>场景组件设计</li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总的说来，我把战斗系统设计认为划分为三大类体系设计：输出体系、互动体系、辅助体系设计。每类体系有各自的设计层和体验层特点，输出体系的特点为操作&#x2F;攻击频率、互动体系特点为互动难度和互动频率、辅助体系落脚于平滑战斗过程和丰富战斗形式。</p><p>一个战斗系统希望设计的特色和体验，需要对不同体系在整个过程中的占比进行调整。比如，希望做自由度高，攻击爽快的战斗系统，则输出体系生效的时长要远高于互动体系，互动体系的难度也要相对低。反过来说，三大体系配比不同，会导向不同的体验结果。</p><p>在体系内部，也有不同类型的设计体系。不同游戏用不同类的设计，使用相同类的设计的不同游戏，也会有所差异，总结过后会对他们形成深刻的认知。</p><p>这样拆战斗系统的目的在于模板化认知不同游戏的战斗系统，容易清晰地作对比分析、积累战斗系统设计。</p><h1 id="战斗系统拆解流程"><a href="#战斗系统拆解流程" class="headerlink" title="战斗系统拆解流程"></a>战斗系统拆解流程</h1><h2 id="战斗系统整体视角"><a href="#战斗系统整体视角" class="headerlink" title="战斗系统整体视角"></a><strong>战斗系统整体视角</strong></h2><p>整个战斗系统循环如何，角色输出循环，角色和怪物互动循环设计的分析：</p><ul><li>把循环画出来。分析整体流动，使用了什么体系、每个体系比重如何，什么设计占据循环重要位置</li><li>重要的设计体系分析</li><li>对比分析、程度分析、体验分析，进行总结</li><li>战斗成长体验分析：逐渐精通、能力逐渐丰富</li></ul><h2 id="单个体系内部视角"><a href="#单个体系内部视角" class="headerlink" title="单个体系内部视角"></a><strong>单个体系内部视角</strong></h2><ul><li>在循环中占据的位置，和其他体系的关联</li><li>具体设计点点出来</li><li>设计作用和优缺点</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 战斗系统理论 </tag>
+            
+            <tag> Bar </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>战斗数值</title>
+      <link href="/2024/10/08/%E6%88%98%E6%96%97%E6%95%B0%E5%80%BC/index/"/>
+      <url>/2024/10/08/%E6%88%98%E6%96%97%E6%95%B0%E5%80%BC/index/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>战斗策划</title>
+      <link href="/2024/10/08/%E8%A7%92%E8%89%B2%E4%BD%93%E7%B3%BB/index/"/>
+      <url>/2024/10/08/%E8%A7%92%E8%89%B2%E4%BD%93%E7%B3%BB/index/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hello world</title>
       <link href="/2024/10/02/hello-world-1/"/>
       <url>/2024/10/02/hello-world-1/</url>
@@ -11,6 +71,25 @@
         <content type="html"><![CDATA[]]></content>
       
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>办公软件参考集合</title>
+      <link href="/2024/10/02/hello-world/"/>
+      <url>/2024/10/02/hello-world/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p> <a href="https://blog.csdn.net/Rcain_R/article/details/137183107">主流好用的Markdown文档编辑器</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://blog.csdn.net/axutongxue/article/details/123226727">国人魔改后的中文优化版资源管理器，终于解决我多年的难题</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
       
     </entry>
     
